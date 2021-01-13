@@ -1,0 +1,64 @@
+.app {
+    width: 100%;
+}
+.app__background {    
+    height: 100vh;
+    background-image: url(https://media.giphy.com/media/U3qYN8S0j3bpK/giphy.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;  
+}
+
+/* https://media.giphy.com/media/BHNfhgU63qrks/giphy.gif */
+.app__content {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+.app-name {
+    font-size: 10rem;
+    color: white;
+    margin: 30px 0;
+    user-select: none;
+}
+
+.app-pic {
+    width: 30%;
+    margin-top: 15px;
+}
+
+.app__list-option {
+    list-style: none;
+    padding-top: 20px;
+}
+.app__list-item {
+
+}
+.app__list-select {
+    text-decoration: none;
+    font-size: 5rem;
+    line-height: 10rem;
+    color: white;
+}
+
+/* modal about */
+.dis-none {
+    display: none;
+}
+
+.close-icon {
+    position: relative;
+    color: red;
+    top: -10px;
+    right: -96%;
+    font-size: 4rem;
+    cursor: pointer;
+}
+.about-content {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 2px #00ece5;
+}
