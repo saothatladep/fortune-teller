@@ -18,17 +18,30 @@
     <div class="app">
         <div class="app__background">
             <div class="grid wide app__content">
-                <p class="app-name">TONTON</p>
-                <!-- <img src="./assets/img/teller.png" alt="" class="app-pic"> -->
-                <img src="./assets/img/ball.png" alt="" class="app-pic">
-                <ul class="app__list-option">
-                    <li class="app__list-item">
-                        <a href="" class="app__list-select">Start</a>
-                    </li>
-                    <li class="app__list-item">
-                        <a href="" class="app__list-select">About</a>
-                    </li>
-                </ul>
+                <div class="app__content-menu">
+                    <div class="app-back dis-none">
+                        <i class="back-icon fas fa-long-arrow-alt-right"></i>
+                    </div>
+                    <p class="app-name">TONTON</p>
+                    <div class="app-img-notice">
+                        
+                    </div>
+                    <img src="./assets/img/ball.png" alt="" class="app-pic">
+                    <div class="app-input-notice dis-none">
+                        
+                    </div>
+                    <input type="date" placeholder="dd-mm-yyyy" id="birthday" name="birthday" class="app-input app-input--size dis-none" required>
+                    <p class="app-process dis-none">Process</p>
+                    <ul class="app__list-option">
+                        <li class="app__list-item">
+                            <span class="app__list-select">Start</span>
+                        </li>
+                        <li class="app__list-item">
+                            <span class="app__list-select">About</span>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
         </div>
     </div>
@@ -43,5 +56,6 @@
             </div>
         </div>
     </div>
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>
