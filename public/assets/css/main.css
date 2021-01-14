@@ -2,7 +2,7 @@
     width: 100%;
 }
 .app__background {    
-    height: 100%;
+    min-height: 100vh;
     background-image: url(https://media.giphy.com/media/U3qYN8S0j3bpK/giphy.gif);
     background-repeat: no-repeat;
     background-size: cover;
