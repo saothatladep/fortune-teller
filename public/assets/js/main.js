@@ -17,18 +17,44 @@ const contentLeft = document.querySelector(".app__content-left");
 const contentCenter = document.querySelector(".app__content-center");
 const contentRight = document.querySelector(".app__content-right");
 const noticeEnd = document.querySelector(".app__content-click p");
+const audio = new Audio('./assets/sound/clickUp.mp3');
+const bgAudio = new Audio('./assets/sound/bgAudio.mp3');
+
+
+
+document.addEventListener('click', musicPlay);
+function musicPlay() {
+    bgAudio.play();
+    document.removeEventListener('click', musicPlay);
+}
+
+// if (bgAudio.play() !== undefined) {
+//   promise.then(_ => {
+//     bgAudio.play();
+//     // Autoplay started!
+//   }).catch(error => {
+//     bgAudio.stop();
+//     // Autoplay was prevented.
+//     // Show a "Play" button so that user can start playback.
+//   });
+// }
+
 
 // about option
+audio.volume = 0.1;
 about.onclick = (e) => {
+  audio.play();
   modalAbout.classList.remove("dis-none");
 };
 
 closeIcon.onclick = (e) => {
+  audio.play();
   modalAbout.classList.add("dis-none");
 };
 
 // start option
 start.onclick = (e) => {
+  audio.play();
   appName.classList.add("dis-none");
   optionApp.classList.add("dis-none");
   inputCalendar.classList.remove("dis-none");
@@ -39,6 +65,7 @@ start.onclick = (e) => {
 
 // back
 backIcon.onclick = (e) => {
+  audio.play();
   appName.classList.remove("dis-none");
   optionApp.classList.remove("dis-none");
   inputCalendar.classList.add("dis-none");
@@ -49,11 +76,13 @@ backIcon.onclick = (e) => {
 
 // process
 process.onclick = (e) => {
+  audio.play();
   menu.classList.add("dis-none");
   main.classList.remove("dis-none");
 }
 let count = 0;
 mainBack.onclick = (e) => {
+  audio.play();
   menu.classList.remove("dis-none");
   main.classList.add("dis-none");
   contentLeft.classList.add("visible-hidden");
@@ -63,7 +92,6 @@ mainBack.onclick = (e) => {
   count = 0;
 }
 
-console.log(contentCenter)
 // show
 
 picMain.onclick = (e) => {
@@ -89,5 +117,7 @@ inputCalendar.onchange = (e) => {
   day = d.getDate();
   console.log(year);
 }
+
+console.log(audio.volume);
 
 // console.log(solarlunar.solar2lunar(2021, 01, 14));
