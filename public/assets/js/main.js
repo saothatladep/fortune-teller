@@ -28,7 +28,6 @@ const levelVolume3 =  document.querySelector(".level-volume:nth-child(3)");
 const levelVolume2 =  document.querySelector(".level-volume:nth-child(4)");
 const levelVolume1 =  document.querySelector(".level-volume:nth-child(5)");
 
-console.log(levelVolume1)
 // audio
 const audio = new Audio('./assets/sound/clickUp.mp3');
 const bgAudio = new Audio('./assets/sound/bgAudio.mp3');
@@ -141,8 +140,13 @@ backIcon.onclick = (e) => {
 // process
 process.onclick = (e) => {
   audio.play();
-  menu.classList.add("dis-none");
-  main.classList.remove("dis-none");
+  if (inputCalendar.value === "") {
+    alert("Please enter your birthday");
+  }
+  else {
+    menu.classList.add("dis-none");
+    main.classList.remove("dis-none");
+  }
 }
 
 let count = 0;
@@ -184,3 +188,10 @@ inputCalendar.onchange = (e) => {
 }
 
 // console.log(solarlunar.solar2lunar(2021, 01, 14));
+
+// const date1 = new Date('7/13/2010');
+// const date2 = new Date('12/15/2010');
+// const diffTime = Math.abs(date2 - date1);
+// const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+// console.log(diffTime + " milliseconds");
+// console.log(diffDays + " days");
