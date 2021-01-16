@@ -17,10 +17,72 @@ const contentLeft = document.querySelector(".app__content-left");
 const contentCenter = document.querySelector(".app__content-center");
 const contentRight = document.querySelector(".app__content-right");
 const noticeEnd = document.querySelector(".app__content-click p");
+const appAudio = document.querySelector(".app__audio");
+const audioON = document.querySelector(".app__audio-on");
+const audioOff = document.querySelector(".app__audio-off");
+const audioUp = document.querySelector(".fa-chevron-up");
+const audioDown = document.querySelector(".fa-chevron-down");
+const levelVolume5 =  document.querySelector(".level-volume:nth-child(1)");
+const levelVolume4 =  document.querySelector(".level-volume:nth-child(2)");
+const levelVolume3 =  document.querySelector(".level-volume:nth-child(3)");
+const levelVolume2 =  document.querySelector(".level-volume:nth-child(4)");
+const levelVolume1 =  document.querySelector(".level-volume:nth-child(5)");
+
+console.log(levelVolume1)
+// audio
 const audio = new Audio('./assets/sound/clickUp.mp3');
 const bgAudio = new Audio('./assets/sound/bgAudio.mp3');
+audio.volume = 0.1;
 
+audioUp.onclick = (e) => {
+  bgAudio.volume +=0.2;
 
+  if (bgAudio.volume > 0) {
+    audioDown.classList.remove("app__audio-icon--disabled");
+  }
+  
+  if(bgAudio.volume === 1) {
+    levelVolume5.classList.add("level-volume--active");
+    audioUp.classList.add("app__audio-icon--disabled");
+  }
+  else if(bgAudio.volume=== 0.8) {
+    levelVolume4.classList.add("level-volume--active");
+  }
+  else if(bgAudio.volume=== 0.6000000000000001) {
+    levelVolume3.classList.add("level-volume--active");
+  }
+  else if(bgAudio.volume=== 0.4000000000000001) {
+    levelVolume2.classList.add("level-volume--active");
+  }
+  else if(bgAudio.volume=== 0.20000000000000007) {
+    levelVolume1.classList.add("level-volume--active");
+  }
+}
+
+audioDown.onclick = (e) => {
+  bgAudio.volume -=0.2;
+
+  if (bgAudio.volume < 1) {
+    audioUp.classList.remove("app__audio-icon--disabled");
+  }
+
+  if(bgAudio.volume === 0.8) {
+    levelVolume5.classList.remove("level-volume--active");
+  }
+  else if(bgAudio.volume=== 0.6000000000000001) {
+    levelVolume4.classList.remove("level-volume--active");
+  }
+  else if(bgAudio.volume=== 0.4000000000000001) {
+    levelVolume3.classList.remove("level-volume--active");
+  }
+  else if(bgAudio.volume=== 0.20000000000000007) {
+    levelVolume2.classList.remove("level-volume--active");
+  }
+  else if(bgAudio.volume=== 5.551115123125783e-17) {
+    levelVolume1.classList.remove("level-volume--active");
+    audioDown.classList.add("app__audio-icon--disabled");
+  }
+}
 
 document.addEventListener('click', musicPlay);
 function musicPlay() {
@@ -28,20 +90,22 @@ function musicPlay() {
     document.removeEventListener('click', musicPlay);
 }
 
-// if (bgAudio.play() !== undefined) {
-//   promise.then(_ => {
-//     bgAudio.play();
-//     // Autoplay started!
-//   }).catch(error => {
-//     bgAudio.stop();
-//     // Autoplay was prevented.
-//     // Show a "Play" button so that user can start playback.
-//   });
-// }
+audioON.onclick = (e) => {
+  audioON.classList.add("visible-hidden");
+  audioOff.classList.remove("visible-hidden");
+  bgAudio.pause();
+  appAudio.classList.add("dis-none")
+}
 
+audioOff.onclick = (e) => {
+  audioOff.classList.add("visible-hidden");
+  audioON.classList.remove("visible-hidden");
+  bgAudio.play();
+  appAudio.classList.remove("dis-none")
+}
 
 // about option
-audio.volume = 0.1;
+
 about.onclick = (e) => {
   audio.play();
   modalAbout.classList.remove("dis-none");
@@ -80,6 +144,7 @@ process.onclick = (e) => {
   menu.classList.add("dis-none");
   main.classList.remove("dis-none");
 }
+
 let count = 0;
 mainBack.onclick = (e) => {
   audio.play();
@@ -117,7 +182,5 @@ inputCalendar.onchange = (e) => {
   day = d.getDate();
   console.log(year);
 }
-
-console.log(audio.volume);
 
 // console.log(solarlunar.solar2lunar(2021, 01, 14));

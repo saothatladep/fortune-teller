@@ -209,3 +209,69 @@
 .visible-hidden {
     visibility: hidden;
 }
+
+/* volume */
+.app__audio {
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+}
+
+.app__audio-icon {
+    font-size: 3.5em;
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+.level-volume {
+    font-size: 2rem;
+    color: var(--white-color);
+    margin: 0;
+    line-height: 2rem
+}
+
+.app__audio-level p {
+    font-size: 3rem;
+    user-select: none;
+
+}
+
+.app__audio-title {
+    font-size: 2rem;
+    color: var(--white-color);
+    margin: 5px 0;
+}
+
+.app__audio-option {
+    position: absolute;
+    bottom: 33%;
+    left: 0;
+}
+
+.app__audio-on,
+.app__audio-off {
+    font-size: 4rem;
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+.app__audio-on {
+    position: relative;
+    top: 0;
+    left: 50%;
+}
+
+.app__audio-off {
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+
+.level-volume--active {
+    color: rgb(0, 255, 0);
+}
+
+.app__audio-icon--disabled {
+    cursor: default;
+    color: rgb(49, 30, 30)
+}
