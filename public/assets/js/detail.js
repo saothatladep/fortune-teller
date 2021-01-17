@@ -1,10 +1,4 @@
 
-const inputCalendar = document.querySelector(".app-input");
-const picMain = document.querySelector(".app__content-pic");
-const contentLeft = document.querySelector(".app__content-left");
-const contentCenter = document.querySelector(".app__content-center");
-const contentRight = document.querySelector(".app__content-right");
-
 // array
 const animals = [
     than = "./assets/img/animals/than.jpg",
@@ -340,6 +334,20 @@ inputCalendar.onchange = (e) => {
           contentRight.classList.remove("visible-hidden");
           noticeEnd.innerHTML = "END";
         }
+    }
+
+    process.onclick = (e) => {
+      audio.play();
+      if (inputCalendar.value === "") {
+        alert("Please enter your birthday");
+      }
+      else if ((dateNow - birthday) < 0) {
+        alert("you are not born");
+      }
+      else {
+        menu.classList.add("dis-none");
+        main.classList.remove("dis-none");
+      }
     }
 };
 

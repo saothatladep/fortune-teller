@@ -23,6 +23,12 @@ const levelVolume3 =  document.querySelector(".level-volume:nth-child(3)");
 const levelVolume2 =  document.querySelector(".level-volume:nth-child(4)");
 const levelVolume1 =  document.querySelector(".level-volume:nth-child(5)");
 
+const inputCalendar = document.querySelector(".app-input");
+const picMain = document.querySelector(".app__content-pic");
+const contentLeft = document.querySelector(".app__content-left");
+const contentCenter = document.querySelector(".app__content-center");
+const contentRight = document.querySelector(".app__content-right");
+
 // audio
 const audio = new Audio('./assets/sound/clickUp.mp3');
 const bgAudio = new Audio('./assets/sound/bgAudio.mp3');
@@ -133,16 +139,7 @@ backIcon.onclick = (e) => {
 };
 
 // process
-process.onclick = (e) => {
-  audio.play();
-  if (inputCalendar.value === "") {
-    alert("Please enter your birthday");
-  }
-  else {
-    menu.classList.add("dis-none");
-    main.classList.remove("dis-none");
-  }
-}
+
 
 let count = 0;
 mainBack.onclick = (e) => {
@@ -152,6 +149,9 @@ mainBack.onclick = (e) => {
   contentLeft.classList.add("visible-hidden");
   contentCenter.classList.add("visible-hidden");
   contentRight.classList.add("visible-hidden");
+  contentLeft.innerHTML="";
+  contentCenter.innerHTML="";
+  contentRight.innerHTML="";
   noticeEnd.innerHTML = "Click me to continue";
   count = 0;
 }
