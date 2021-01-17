@@ -4,7 +4,6 @@ const closeIcon = document.querySelector(".close-icon");
 const start = document.querySelector(".app__list-item:first-child");
 const appName = document.querySelector(".app-name");
 const optionApp = document.querySelector(".app__list-option");
-const inputCalendar = document.querySelector(".app-input");
 const appNotice = document.querySelector(".app-input-notice");
 const process = document.querySelector(".app-process");
 const backIcon = document.querySelector(".app-back");
@@ -12,10 +11,6 @@ const menu = document.querySelector(".app__content-menu");
 const main = document.querySelector(".app__content-main");
 const mainBack = document.querySelector(".app__content-back");
 const clickInteract = document.querySelector(".app__content-interact");
-const picMain = document.querySelector(".app__content-pic");
-const contentLeft = document.querySelector(".app__content-left");
-const contentCenter = document.querySelector(".app__content-center");
-const contentRight = document.querySelector(".app__content-right");
 const noticeEnd = document.querySelector(".app__content-click p");
 const appAudio = document.querySelector(".app__audio");
 const audioON = document.querySelector(".app__audio-on");
@@ -161,37 +156,5 @@ mainBack.onclick = (e) => {
   count = 0;
 }
 
-// show
 
-picMain.onclick = (e) => {
-  count += 1;
-  if(count == 1) {
-    contentLeft.classList.remove("visible-hidden");
-  }
-  else if(count == 2) {
-    contentCenter.classList.remove("visible-hidden");
-  }
-  else if(count == 3) {
-    contentRight.classList.remove("visible-hidden");
-    noticeEnd.innerHTML = "END";
-  }
-  // console.log(count);
-}
 
-// inputCalendar.valueAsDate = new Date();
-inputCalendar.onchange = (e) => {
-  let d = new Date( inputCalendar.value);
-  year = d.getFullYear();
-  month = d.getMonth()+1;
-  day = d.getDate();
-  console.log(year);
-}
-
-// console.log(solarlunar.solar2lunar(2021, 01, 14));
-
-// const date1 = new Date('7/13/2010');
-// const date2 = new Date('12/15/2010');
-// const diffTime = Math.abs(date2 - date1);
-// const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
-// console.log(diffTime + " milliseconds");
-// console.log(diffDays + " days");

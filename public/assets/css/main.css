@@ -146,14 +146,6 @@
     
 }
 
-.app__content-info {
-    height: 300px;
-    margin-top: 50px;
-    border-radius: 25%;
-    background-color: var(--white-color);
-    box-shadow:#428bca 6px 6px 6px;
-}
-
 .app__content-interact {
     display: flex;
     justify-content: space-between;
@@ -284,4 +276,41 @@
 .app__audio-icon--disabled {
     cursor: default;
     color: rgb(49, 30, 30)
+}
+
+
+/* info */
+.app__content-info::-webkit-scrollbar {
+    display: none;
+}
+.app__content-info {
+    height: 300px;
+    margin-top: 50px;
+    border-radius: 25%;
+    background-color: var(--white-color);
+    box-shadow:#428bca 6px 6px 6px;
+    overflow: hidden;
+    overflow-y:auto;
+}
+
+.app__info-title {
+    font-size: 4rem;
+    margin: 10px;
+}
+
+.app__content-info p {
+    font-size: 2rem;
+    margin: 10px 10px;
+    text-align: center;
+    line-height: 3.5rem
+}
+
+.app__content-info p  span{
+    color:rgb(236, 16, 181);
+    font-size: 3rem;
+}
+
+.app__content-info img {
+    width: 200px;
+    margin: 10px 0;
 }
