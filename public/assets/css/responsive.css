@@ -38,6 +38,9 @@
     .app-input {
         width: 60%;
     }
+    .row .col:last-child {
+        margin-left: 25%;
+    }
 
     .app__content-click {
         width: 150px;
@@ -88,12 +91,194 @@
     .app__content-click p {
         font-size: 1.5rem;
         text-align: center;
-        line-height: 6rem;
+        line-height: 5rem;
     }
 
 }
 
 /* mobile */
 @media (max-width: 739px) {
+    .app__content-menu {
+        margin-top: 15%;
+        line-height: 10rem;
+    }
+
+    .app-name {
+        font-size: 6rem;
+    }
+
+    .app__list-select {
+        font-size: 4rem;
+    }
+
+    .app__list-option {
+        line-height: 1rem;
+    }
+
+    .app__audio {
+        margin: 20px 0 0 10px;
+    }
+
+    .app__audio-title {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .app__audio-level p {
+        font-size: 2rem;
+        line-height: 1rem;
+    }
+    .app__audio-on,
+    .app__audio-off {
+        font-size: 2.5rem;
+    }
+
+    .app__audio-on {
+        position: relative;
+        top: 30px;
+        left: 80%;
+    }
+
+    .app__audio-off {
+        position: absolute;
+        top: 30px;
+        left: 80%;
+    }
+
+    .app__audio-icon {
+        font-size: 2rem;
+    }
+
+    .app__audio-option {
+        bottom: 28%;
+    }
+    .app-pic {
+        width: 40%;
+        
+    }
+    .about-content {
+        width: 300px;
+        height: 200px;
+    }
+    .close-icon {
+        right: -94%;
+        top: -3px;
+        font-size: 2rem;
+    }
+    .app-input-notice {
+        width: 200px;
+        height: 100px;
+        top: 220px;
+        right: 90px;
+    }
+    .app-input-notice p {
+        font-size: 1.2rem;
+        line-height: 2rem;
+        margin-top: 10px;
+    }
+    .app-input-notice::after {
+        left: 35px;
+        bottom: 153px;
+        border-width: 12px 71px;
+        transform: rotate(79deg);
+    }
+
+    .app-input {
+        width: 50%;
+        height:60px;
+        font-size: 2rem;
+        position: absolute;
+        bottom: 216px;
+    }
     
+    .app-process {
+        font-size: 4rem;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .app-back{
+        line-height: 1rem;
+        margin-right: 10px;
+    }
+    .content-back-title{
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+    }
+    .back-icon{
+        font-size: 2.5rem;
+    }
+
+    .app__content-click {
+        width: 150px;
+        height: 100px;
+        left: 39%;
+        margin-top: 100px;
+        border-radius: 50%;
+    }
+
+    .app__content-info {
+        height: 150px;
+        margin: 5px 0;
+    }
+
+
+    .app__info-title {
+        font-size: 2.5rem;
+        margin: 5px;
+    }
+    
+    .app__content-info p {
+        font-size: 1.5rem;
+        margin: 5px 5px;
+        text-align: center;
+        line-height: 2rem
+    }
+    
+    .app__content-info p  span{
+        color:rgb(236, 16, 181);
+        font-size: 2.5rem;
+    }
+
+    .app__content-info img {
+        width: 150px;
+        margin: 10px 0;
+    }
+
+    .app__content-pic {
+        width: 20%;
+        margin: 0;
+        bottom: -30px;
+    }
+
+    .app__content-click {
+        width: 70px;
+        height: 50px;
+        left: 28%;
+        margin-top: 30px;
+    }
+
+    .app__content-click p {
+        font-size: 1rem;
+        text-align: center;
+        line-height: 1.5rem;
+    }
+
+    .app__content-click::after {
+        right: -40px;
+        top: 50px;
+        border-width: 6px 34px;
+    }
+    .app__content-back{
+        line-height: 1rem;
+        margin-right: 10px;
+    }
+    .content-back-title{
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+    }
+    .content-back-icon{
+        font-size: 2.5rem;
+    }
+   
 }
