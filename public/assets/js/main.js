@@ -88,6 +88,7 @@ document.addEventListener('click', musicPlay);
 function musicPlay() {
     bgAudio.play();
     document.removeEventListener('click', musicPlay);
+    bgAudio.loop=true;
 }
 
 audioON.onclick = (e) => {
